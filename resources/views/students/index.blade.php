@@ -6,38 +6,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Data Posts - SantriKoding.com</title>
+    <title>Data students - SantriKoding.com</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 </head>
-<body style="background: lightgray">
+<body style="background: lightblue">
 
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-12">
                 <div class="card border-0 shadow rounded">
                     <div class="card-body">
-                        <a href="{{ route('posts.create') }}" class="btn btn-md btn-success mb-3">TAMBAH POST</a>
+                        <a href="{{ route('students.create') }}" class="btn btn-md btn-success mb-3">TAMBAH DATA SISWA</a>
                         <table class="table table-bordered">
                             <thead>
                               <tr>
-                                <th scope="col">GAMBAR</th>
-                                <th scope="col">JUDUL</th>
-                                <th scope="col">CONTENT</th>
-                                <th scope="col">AKSI</th>
+                                <th scope="col">Nomor</th>
+                                <th scope="col">Nama</th>
+                                <th scope="col">Foto</th>                        
+                                <th scope="col">Email</th>
+                                <th scope="col">Telp</th>
+                                <th scope="col">Aksi</th>
                               </tr>
                             </thead>
                             <tbody>
-                              @forelse ($posts as $post)
+                              @forelse ($students as $student)
                                 <tr>
+                                <td>{{ $student->number }}</td>
+                                <td>{{ $student->name }}</td>
                                     <td class="text-center">
-                                        <img src="{{ Storage::url('public/posts/').$post->image }}" class="rounded" style="width: 150px">
-                                    </td>
-                                    <td>{{ $post->title }}</td>
-                                    <td>{!! $post->content !!}</td>
+                                    <img src="{{ Storage::url('public/students/').$student->photo }}" class="rounded" style="width: 150px">                                    </td>
+                                    <td>{{ $student->email }}</td>
+                                    <td>{!! $student->phone !!}</td>
                                     <td class="text-center">
-                                        <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('posts.destroy', $post->id) }}" method="POST">
-                                            <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-sm btn-primary">EDIT</a>
+                                        <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('students.destroy', $student->id) }}" method="POST">
+                                            <a href="{{ route('students.edit', $student->id) }}" class="btn btn-sm btn-primary">EDIT</a>
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-sm btn-danger">HAPUS</button>
@@ -46,22 +49,21 @@
                                 </tr>
                               @empty
                                   <div class="alert alert-danger">
-                                      Data Post belum Tersedia.
+                                      Data Student belum Tersedia.
                                   </div>
                               @endforelse
                             </tbody>
                           </table>  
-                          {{ $posts->links() }}
+                          {{ $students->links() }}
                     </div>
                 </div>
             </div>
         </div>
     </div>
-   
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script>
         //message with toastr
         @if(session()->has('success'))
