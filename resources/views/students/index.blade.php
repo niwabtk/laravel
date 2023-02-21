@@ -17,7 +17,7 @@
             <div class="col-md-12">
                 <div class="card border-0 shadow rounded">
                     <div class="card-body">
-                        <a href="{{ route('students.create') }}" class="btn btn-md btn-success mb-3">TAMBAH DATA SISWA</a>
+                    <a href="{{ route('students.create') }}" class="btn btn-sm btn-success " style="position:">Tambah data</a>
                         <table class="table table-bordered">
                             <thead>
                               <tr>
@@ -35,7 +35,7 @@
                                 <td>{{ $student->number }}</td>
                                 <td>{{ $student->name }}</td>
                                     <td class="text-center">
-                                    <img src="{{ Storage::url('public/students/').$student->photo }}" class="rounded" style="width: 150px">                                    </td>
+                                    <img src="{{ Storage::url('public/students/').$student->photo }}" class="rounded" style="width: 150px"></td>
                                     <td>{{ $student->email }}</td>
                                     <td>{!! $student->phone !!}</td>
                                     <td class="text-center">

@@ -107,25 +107,31 @@
           <li class="nav-item">
             <a class="nav-link" href="posts">
               <i class="fa-solid fa-book"></i>
-              Posts
+              Post
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="students">              
               <i class="fa-solid fa-user"></i>
-              Students
+              Student
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="groups">              
+              <i class="fa-solid fa-user"></i>
+              Group
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">              
+              <i class="fa-solid fa-user"></i>
+              scedule
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">              
               <i class="fa-solid fa-user"></i>
               Presences
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">              
-              <i class="fa-solid fa-user"></i>
-              Schedules
             </a>
           </li>
         </ul>

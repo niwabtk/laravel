@@ -5,25 +5,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/idbc', function () {
-    return view('idbc.index');
+Route::get('/Group', function () {
+    return view('groups.index');
 });
 
 //route resource
 Route::resource('/posts', \App\Http\Controllers\PostController::class);
 Route::resource('/students', \App\Http\Controllers\StudentController::class);
+Route::resource('/groups', \App\Http\Controllers\GroupController::class);
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
