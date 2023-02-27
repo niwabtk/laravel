@@ -56,7 +56,7 @@
 	<body>
 		
 	<div class="gtco-loader"></div>
-	
+
 	<div id="page">
 	<nav class="gtco-nav" role="navigation">
 		<div class="container">
@@ -68,9 +68,9 @@
 					<ul>
 						<li class="active"><a href="#" data-nav-section="home">Home</a></li>
 						<li><a href="#" data-nav-section="about">About</a></li>
-						<li><a href="#" data-nav-section="practice-areas">Tujuan Ma'had</a></li>
+						<li><a href="/login" data-nav-section="practice-areas">Tujuan Ma'had</a></li>
 						<li><a href="#" data-nav-section="our-team">Motto Ma'had</a></li>
-						<li class="btn-cta"><a href="#" data-nav-section="contact"><span>Contact</span></a></li>
+						<li class="btn"><a href="#" data-nav-section="contact"><span>Contact</span></a></li>
 						<li><a href="https://localhost/justice/baca.php#" data-nav-section="about">Baca Qur'an</a></li>
 						<!-- For external page link -->
 						<!-- <li><a href="http://gettemplates.co/" class="external">External</a></li> -->
