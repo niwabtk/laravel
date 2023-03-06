@@ -133,11 +133,11 @@
           <li class="nav-item">
             <a class="nav-link" href="schedules">              
               <i class="fa-solid fa-user"></i>
-              scedule
+              schedule
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">              
+            <a class="nav-link" href="presences">              
               <i class="fa-solid fa-user"></i>
               Presences
             </a>
