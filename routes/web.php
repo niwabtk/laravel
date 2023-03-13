@@ -16,6 +16,8 @@ Route::resource('/groups', \App\Http\Controllers\GroupController::class);
 Route::resource('/home', \App\Http\Controllers\HomeController::class);
 Route::resource('/schedules', \App\Http\Controllers\SchedulesController::class);
 Route::resource('/members', \App\Http\Controllers\MembersController::class);
+Route::resource('/presences', \App\Http\Controllers\PresencesController::class);
+
 
 
 Auth::routes();
@@ -26,4 +28,3 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Route::resource('presences', 'PresencesController');

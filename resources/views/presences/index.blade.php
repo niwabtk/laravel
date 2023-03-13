@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
     <div class="container">
@@ -9,11 +9,11 @@
                 <div class="card">
                     <div class="card-header">Presences</div>
                     <div class="card-body">
-                        <a href="{{ url('/Presences/create') }}" class="btn btn-success btn-sm" title="Add New Presence">
+                        <a href="{{ url('/presences/create') }}" class="btn btn-success btn-sm" title="Add New Presence">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New
                         </a>
 
-                        <form method="GET" action="{{ url('/Presences') }}" accept-charset="UTF-8" class="form-inline my-2 my-lg-0 float-right" role="search">
+                        <form method="GET" action="{{ url('/presences') }}" accept-charset="UTF-8" class="form-inline my-2 my-lg-0 float-right" role="search">
                             <div class="input-group">
                                 <input type="text" class="form-control" name="search" placeholder="Search..." value="{{ request('search') }}">
                                 <span class="input-group-append">
